@@ -8,7 +8,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
-@SpringBootApplication(scanBasePackages = "com.reger.test.consumer,com.reger.test.web")
+@SpringBootApplication(scanBasePackages = {"com.reger.test.consumer","com.reger.test.web"})
 public class DubboLeaderApplication implements CommandLineRunner, DisposableBean {
 
 	private static final Logger log = LoggerFactory.getLogger(DubboLeaderApplication.class);

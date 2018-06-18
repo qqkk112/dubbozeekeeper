@@ -4,11 +4,11 @@ server:
 #\u6570\u636E\u5E93\u914D\u7F6E
 #spring.datasource.type=com.alibaba.druid.pool.DruidDataSource
 spring:
-#  datasource:
-#    url: jdbc:mysql://localhost:3306/demo?useUnicode=true&characterEncoding=UTF-8&useSSL=true
-#    username: root
-#    password: asd123
-#    driver-class-name: com.mysql.jdbc.Driver
+  datasource:
+    url: jdbc:mysql://localhost:3306/demo?useUnicode=true&characterEncoding=UTF-8&useSSL=true
+    username: root
+    password: asd123
+    driver-class-name: com.mysql.jdbc.Driver
   jmx:
     enabled: false
   profiles:
@@ -115,4 +115,26 @@ spring:
 #        weight:  
 #        
 ##################################################发布者配置信息###############################################################
-  
+
+
+# MyBatis
+#mybatis:
+#  # MyBatis配置
+#  type-aliases-package: com.reger.test.dao
+#  mapper-locations: classpath:com/reger/test/mapper/*.xml
+#  configuration:
+#    map-underscore-to-camel-case: true
+#
+#
+##pagehelper
+#pagehelper:
+# helperDialect: mysql
+# reasonable: true
+# supportMethodsArguments: true
+# params: count=countSql
+#
+### BaseMapper
+#mapper:
+#  mappers: com.reger.test.config.BaseMapper
+#  not-empty: false
+#  identity: MYSQL

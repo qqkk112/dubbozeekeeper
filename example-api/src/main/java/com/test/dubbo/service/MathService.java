@@ -2,7 +2,9 @@ package com.test.dubbo.service;
 
 import java.util.List;
 
+import com.test.dubbo.common.Wrapper;
 import com.test.dubbo.model.User;
+import org.springframework.web.bind.annotation.RequestParam;
 
 public interface MathService {
 	
@@ -29,4 +31,6 @@ public interface MathService {
 	User getUser(User user);
 
 	String getList();
+
+	Wrapper list(Integer page, Integer size);
 }

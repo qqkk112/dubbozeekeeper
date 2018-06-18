@@ -18,5 +18,16 @@
 			<groupId>com.gitee.reger</groupId>
 			<artifactId>spring-boot-starter-dubbo</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>com.github.pagehelper</groupId>
+			<artifactId>pagehelper</artifactId>
+			<version>4.2.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+			<version>1.9.8</version>
+			<scope>compile</scope>
+		</dependency>
 	</dependencies>
 </project>
