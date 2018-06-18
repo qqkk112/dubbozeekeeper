@@ -1,6 +1,8 @@
 server:
   port: 6870
 
+
+active: debug
 #\u6570\u636E\u5E93\u914D\u7F6E
 #spring.datasource.type=com.alibaba.druid.pool.DruidDataSource
 spring:
@@ -138,3 +140,4 @@ spring:
 #  mappers: com.reger.test.config.BaseMapper
 #  not-empty: false
 #  identity: MYSQL
+

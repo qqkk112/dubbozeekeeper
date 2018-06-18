@@ -38,7 +38,7 @@ import java.util.List;
 public class WebMvcConfigurer extends WebMvcConfigurerAdapter {
 
     private final Logger logger = LoggerFactory.getLogger(WebMvcConfigurer.class);
-    @Value("${spring.profiles.active}")
+    @Value("${active}")
     private String env;//当前激活的配置文件
 
     //使用阿里 FastJson 作为JSON MessageConverter
@@ -142,7 +142,8 @@ public class WebMvcConfigurer extends WebMvcConfigurerAdapter {
      * 3. 混合密钥（secret）进行md5获得签名，与请求的签名进行比较
      */
     private boolean validateSign(HttpServletRequest request) {
-        String requestSign = request.getParameter("sign");//获得请求签名，如sign=19e907700db7ad91318424a97c54ed57
+        // String requestSign = request.getParameter("sign");//获得请求签名，如sign=19e907700db7ad91318424a97c54ed57
+        String requestSign = request.getHeader("sign");
         if (StringUtils.isEmpty(requestSign)) {
             return false;
         }
@@ -161,6 +162,12 @@ public class WebMvcConfigurer extends WebMvcConfigurerAdapter {
         String sign = DigestUtils.md5Hex(linkString + secret);//混合密钥md5
 
         return StringUtils.equals(sign, requestSign);//比较
+    }
+
+    //校验是否一个IP或者用户频繁请求
+    private Boolean validateAndSettingValidateCode() {
+        // TODO
+        return true;
     }
 
     private String getIpAddress(HttpServletRequest request) {
