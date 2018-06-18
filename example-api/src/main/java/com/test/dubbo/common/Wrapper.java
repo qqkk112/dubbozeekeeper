@@ -20,7 +20,11 @@ public class Wrapper<T> implements Serializable {
     public static final String SUCCESS_MESSAGE = "操作成功";
     public static final int CAPTCHA_CODE_ERROR = 600;
     public static final int ERROR_CODE = 500;
+    public static final int NOT_FOUND = 404;
+    public static final int FAIL = 400;
+    public static final int UNAUTHORIZED = 401;//未认证（签名错误）
     public static final String ERROR_MESSAGE = "内部异常";
+    public static final String SIGNATURE_ERROR_MESSAGE = "签名失败";
     public static final int ILLEGAL_ARGUMENT_CODE_ = 100;
     public static final String ILLEGAL_ARGUMENT_MESSAGE = "参数非法";
     private int code;
